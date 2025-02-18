@@ -11,7 +11,7 @@ Hello! I'm Vidush Singhal, a 4th-year Ph.D. student in the Department of [Electr
 Before joining the Ph.D. program at Purdue University, I earned my Bachelor of Science in Computer Engineering from Purdue. During my Ph.D. journey, I have had the opportunity to intern at notable organizations such as [Nod.ai](https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html) and [Lawrence Livermore National Labs](https://www.llnl.gov/).
 
 
-#Research Areas of Interest
+# Research Areas of Interest
 - Compilers 
 - Automatic Parallelization and Vectorization 
 - Data Layout Optimization 
