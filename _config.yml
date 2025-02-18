@@ -22,7 +22,7 @@ repository               : "vidsinghal/vidushsinghal"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "WebsiteProfilePicture.png"
+  avatar           : "profile.png"
   name             : "Vidush Singhal"
   pronouns         : # example: "she/her"  
   bio              : "Compilers researcher"
@@ -37,7 +37,7 @@ author:
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0001-6912-3840"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
 
