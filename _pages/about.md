@@ -19,6 +19,6 @@ Before joining the Ph.D. program at Purdue University, I earned my Bachelor of S
 - High Performance Computing 
 
 # Education 
-- &#x1F393; B.Sc. in Computer Engineering, 2021
+- &#x1F393; B.Sc. in Computer Engineering
   - **Institution**: Purdue University, West Lafayette, IN, USA
   - **Graduation Year**: 2021
