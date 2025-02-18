@@ -8,6 +8,21 @@ main:
   - title: "Publications"
     #url: /publications/
     url: https://scholar.google.com/citations?user=Rl-ErOsAAAAJ&hl=en
+  
+  - title: "Service"
+    url: /service/
+
+  - title: "Blog Posts"
+    url: /year-archive/
+    
+  - title: "CV"
+    url: /files/Resume.pdf
+
+  - title: "Latest News!"
+    url: /news/
+    
+  #- title: "Guide"
+  #  url: /markdown/
 
   #- title: "Talks"
   #  url: /talks/    
@@ -18,11 +33,3 @@ main:
   #- title: "Portfolio"
   #  url: /portfolio/
         
-  - title: "Blog Posts"
-    url: /year-archive/
-    
-  - title: "CV"
-    url: /files/Resume.pdf
-    
-  #- title: "Guide"
-  #  url: /markdown/
