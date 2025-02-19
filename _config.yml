@@ -13,8 +13,8 @@ title                    : "Vidush Singhal / Homepage"
 title_separator          : "-"
 name                     : &name "Vidush Singhal"
 description              : &description "personal description"
-url                      : https://vidsinghal.github.io/vidushsinghal # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+url                      : "https://vidsinghal.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+baseurl                  : "/vidushsinghal" # the subpath of your site, e.g. "/blog"
 repository               : "vidsinghal/vidushsinghal"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
