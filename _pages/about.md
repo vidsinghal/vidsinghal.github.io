@@ -18,6 +18,12 @@ Before joining the Ph.D. program at Purdue University, I earned my Bachelor of S
 - Compilers for GPU
 - High Performance Computing 
 
+# Current Status
+- **Position**: RA @Purdue University
+- **Date started**: Fall 2021
+- **Address**: Electrical Engineering Building, 465 Northwestern Ave, West Lafayette, IN 47907 
+- **Email**: singhav@purdue.edu
+
 # Education 
 - &#x1F393; B.Sc. in Computer Engineering
   - **Institution**: Purdue University, West Lafayette, IN, USA
