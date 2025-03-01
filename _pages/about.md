@@ -12,7 +12,7 @@ redirect_from:
 ![StarTrekData]({{base_path}}/images/data_star_trek.png){: .align-right width="300px"}
 
 Hello! I'm Vidush Singhal, a 4th-year Ph.D. student in the Department of [Electrical and Computer Engineering](https://engineering.purdue.edu/ECE) at [Purdue University](https://www.purdue.edu/).
-I am incredibly fortunate and blessed to work under the esteemed guidance of Professor [Milind Kulkarni](https://engineering.purdue.edu/~milind/). 
+I am fortunate to be advised by Professor [Milind Kulkarni](https://engineering.purdue.edu/~milind/). 
 
 My research primarily focuses on compilers, with an emphasis on static analysis to enhance runtime performance of irregular programs, even at the cost of higher compile times. I am particularly interested in automatic parallelization and vectorization to enhance runtime performance and increase resource utilization. Additionally, I am focusing on data layout optimization to improve the spatial locality of irregular programs.
 
