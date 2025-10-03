@@ -5,20 +5,11 @@
   <title>Redirecting...</title>
   <meta name="robots" content="noindex" />
   <script>
-    // Convert /vidushsinghal/...  ->  /...
-    (function () {
-      const prefix = '/vidushsinghal';
-      const loc = window.location;
-      const fullPath = loc.pathname || '/';
-      if (fullPath.startsWith(prefix)) {
-        const newPath = fullPath.slice(prefix.length) || '/';
-        const qs = loc.search || '';
-        const hash = loc.hash || '';
-        const target = loc.origin + newPath + qs + hash;
-        // Use location.replace so browser history doesn't keep the redirect page
-        window.location.replace(target);
-      }
-    })();
+    const prefix = '/vidushsinghal';
+    const loc = window.location;
+    const newPath = (loc.pathname || '/').startsWith(prefix) ? (loc.pathname.slice(prefix.length) || '/') : '/';
+    const target = loc.origin + newPath + (loc.search||'') + (loc.hash||'');
+    window.location.replace(target);
   </script>
   <meta http-equiv="refresh" content="0; url=/" />
 </head>
@@ -26,3 +17,4 @@
   <p>Redirecting to the site root. If you are not redirected automatically, <a href="/">click here</a>.</p>
 </body>
 </html>
+

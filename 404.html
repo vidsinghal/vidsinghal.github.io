@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Not found</title>
+  <meta name="robots" content="noindex" />
+  <script>
+    (function () {
+      const prefix = '/vidushsinghal';
+      const loc = window.location;
+      const path = loc.pathname || '/';
+      if (path.startsWith(prefix)) {
+        const newPath = path.slice(prefix.length) || '/';
+        const qs = loc.search || '';
+        const hash = loc.hash || '';
+        const target = loc.origin + newPath + qs + hash;
+        // replace so the 404 page isn't kept in history
+        window.location.replace(target);
+      } else {
+        // leave the 404 page as is for other missing pages
+        document.documentElement.innerHTML = '<body style="font-family:system-ui,Arial,Helvetica,sans-serif;padding:40px;"><h1>404 Not Found</h1><p>The requested resource was not found.</p></body>';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting…</p>
+</body>
+</html>
+
