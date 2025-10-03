@@ -14,7 +14,6 @@ redirect_from:
 - Member of the Artifact Evaluation Committee (AEC) for [PLDI 2025](https://pldi25.sigplan.org/committee/pldi-2025-pldi-research-artifacts-artifact-evaluation-committee)
 - Collaborative Reviewer (CGO 2025)
 - Member of the Artifact Evaluation Committee (AEC) for [CGO 2025](https://2025.cgo.org/track/cgo-2025-artifact-evaluation)
-- Received a travel grant to attend the [2024 LLVM developers meeting](https://llvm.org/devmtg/2024-10/)
 - Member of the Artifact Evaluation Committee (AEC) for [PPoPP 2024](https://ppopp24.sigplan.org/track/PPoPP-2024-artifact-evaluation)
 - Member of the Artifact Evaluation Committee (AEC) for [PPoPP 2023](https://ppopp23.sigplan.org/track/PPoPP-2023-artifact-evaluation)
 
@@ -24,7 +23,7 @@ redirect_from:
 - Student Volunteer for [SPLASH 2021](https://2021.splashcon.org/)
 
 # Honors and Awards 
-- Received a travel grant, LLVM developers meeting
+- Received a travel grant to attend the [2024 LLVM developers meeting](https://llvm.org/devmtg/2024-10/)
 - Semester Honors, Purdue University 
 - Dean's List and Semester Honors, Purdue University
 
