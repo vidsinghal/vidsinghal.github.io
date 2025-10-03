@@ -6,6 +6,8 @@ redirect_from:
 ---
 
 # Service
+- Member of the Artifact Evaluation Committee (AEC) for [CGO 2026](https://2026.cgo.org/track/cgo-2026-artifact-evaluation)
+- Member of the Artifact Evaluation Committee (AEC) for [ICFP 2025](https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe)
 - Member of the Artifact Evaluation Committee (AEC) for [PLDI 2025](https://pldi25.sigplan.org/committee/pldi-2025-pldi-research-artifacts-artifact-evaluation-committee)
 - Collaborative Reviewer (CGO 2025)
 - Member of the Artifact Evaluation Committee (AEC) for [CGO 2025](https://2025.cgo.org/track/cgo-2025-artifact-evaluation)
