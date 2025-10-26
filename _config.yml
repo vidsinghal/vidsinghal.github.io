@@ -152,7 +152,7 @@ analytics:
     tracking_id          :
 
 
-# Reading Files
+# Reading Files 
 include:
   - .htaccess
   - _pages

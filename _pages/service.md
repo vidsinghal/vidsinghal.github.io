@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 # Leadership experience 
-- Seminar Co-Coordinator, Purdue Programming Languages and Systems Research Group (PurPL)
+- Seminar Co-Coordinator, Purdue Programming Languages and Systems Research Group [PurPL](https://purduepl.github.io/index.html)
 
 # Review Experience
 - Member of the Artifact Evaluation Committee (AEC) for [CGO 2026](https://2026.cgo.org/track/cgo-2026-artifact-evaluation)
@@ -36,10 +36,7 @@ redirect_from:
 # Professional Memberships 
 - Eta Kappa Nu, Purdue Electrical and Computer Engineering Honors Society
 
-# Mentorship
-- [SURF](https://docs.lib.purdue.edu/surf/) research mentor 
-  - Qingyuan (Peter) Li (Undergrad @ Purdue)
-
+# Mentorship 
+- Qingyuan (Peter) Li, Undergrad @ Purdue -- [SURF](https://docs.lib.purdue.edu/surf/) research mentor
 - Peter A Kaya Gretchikha, Undergrad @ Purdue
-
 - Mikah Kainen, Undergrad @ Purdue
