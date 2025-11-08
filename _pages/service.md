@@ -9,6 +9,7 @@ redirect_from:
 - Seminar Co-Coordinator, Purdue Programming Languages and Systems Research Group [PurPL](https://purduepl.github.io/index.html)
 
 # Review Experience
+- Member of the Artifact Evaluation Committee (AEC) for [POPL 2026](https://popl26.sigplan.org/track/POPL-2026-artifact-evaluation)
 - Member of the Artifact Evaluation Committee (AEC) for [CGO 2026](https://2026.cgo.org/track/cgo-2026-artifact-evaluation)
 - Member of the Artifact Evaluation Committee (AEC) for [ICFP 2025](https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe)
 - Member of the Artifact Evaluation Committee (AEC) for [PLDI 2025](https://pldi25.sigplan.org/committee/pldi-2025-pldi-research-artifacts-artifact-evaluation-committee)
@@ -40,3 +41,5 @@ redirect_from:
 - Qingyuan (Peter) Li, Undergrad @ Purdue -- [SURF](https://docs.lib.purdue.edu/surf/) research mentor
 - Peter A Kaya Gretchikha, Undergrad @ Purdue
 - Mikah Kainen, Undergrad @ Purdue
+- Logan Anderson, Phd @ Purdue
+- Aniruddh Srivastava, Undergrad @ Purdue
