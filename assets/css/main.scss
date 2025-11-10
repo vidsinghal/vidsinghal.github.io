@@ -40,3 +40,14 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+
+.author__avatar img {
+  border-radius: 20px;
+  width: 150px;
+  height: 230px;
+  object-fit: cover;
+  object-position: center top;
+  background-color: #f6f8fa; /* very light gray / off-white */
+  border: 3px solid #d0d7de;
+}
