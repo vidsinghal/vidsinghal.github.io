@@ -11,10 +11,14 @@ redirect_from:
 
 ![StarTrekData]({{base_path}}/images/data_star_trek.png){: .align-right width="300px"}
 
-Hello! I'm Vidush Singhal, a 4th-year Ph.D. student in the Department of [Electrical and Computer Engineering](https://engineering.purdue.edu/ECE) at [Purdue University](https://www.purdue.edu/).
+Hello! I'm Vidush Singhal. I am currently a Ph.D. student in the Department of [Electrical and Computer Engineering](https://engineering.purdue.edu/ECE) at [Purdue University](https://www.purdue.edu/).
 I am fortunate to be advised by Professor [Milind Kulkarni](https://engineering.purdue.edu/~milind/). 
 
-My research primarily focuses on compilers, with an emphasis on static analysis to enhance runtime performance of irregular programs, even at the cost of higher compile times. I am particularly interested in automatic parallelization and vectorization to enhance runtime performance and increase resource utilization. Additionally, I am focusing on data layout optimization to improve the spatial locality of irregular programs.
+My research primarily focuses on compilers, with an emphasis on static analysis to enhance runtime performance of irregular programs, even at the cost of higher compile times. I am particularly interested in automatic parallelization and vectorization to enhance runtime performance and optimize resource utilization. Additionally, I am focusing on data layout optimization to improve the spatial locality of irregular programs.
+
+I have also worked on optimizations for GPU compilers for instance the LLVM GPU sanitizer. I am interested in exploring optimizing scheduling of programs on GPUs and making 
+parallelism on GPUs more efficient, to this end, I am interested in applying classical compiler optimizations to artificial intelligence programs that may execute on GPUs.
+
 
 Before joining the Ph.D. program at Purdue University, I earned my Bachelor of Science in Computer Engineering from Purdue. During my Ph.D. journey, I have had the opportunity to intern at notable organizations such as [Nod.ai](https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html), [Lawrence Livermore National Labs](https://www.llnl.gov/) and [Microsoft Research](https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/)
 
@@ -24,7 +28,16 @@ Before joining the Ph.D. program at Purdue University, I earned my Bachelor of S
 - Automatic Parallelization and Vectorization 
 - Data Layout Optimization 
 - Compilers for GPU
-- High Performance Computing 
+- High Performance Computing
+
+# Talks 
+- [MWPLS 2024](https://pl.cs.uchicago.edu/PLSummit/2024/) -
+Optimizing Layout of Recursive Datatypes with Marmoset: Or, Algorithms + Data Layouts = Efficient Programs. Vidush Singhal, Purdue University.
+- [ECOOP 2024](https://2024.ecoop.org/program/program-ecoop-2024/) -
+Optimizing Layout of Recursive Datatypes with Marmoset: Or, Algorithms + Data Layouts = Efficient Programs. Vidush Singhal, Purdue University.
+- [ASE 2022](https://conf.researchr.org/program/ase-2022/program-ase-2022/) - 
+Cornucopia: A Framework for Feedback Guided Generation of Binaries
+
 
 # Current Status
 - **Position**: Research Assistant @Purdue University
