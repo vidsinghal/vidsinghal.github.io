@@ -16,11 +16,12 @@ I am fortunate to be advised by Professor [Milind Kulkarni](https://engineering.
 
 My research primarily focuses on compilers, with an emphasis on static analysis to enhance runtime performance of irregular programs, even at the cost of higher compile times. I am particularly interested in automatic parallelization and vectorization to enhance runtime performance and optimize resource utilization. Additionally, I am focusing on data layout optimization to improve the spatial locality of irregular programs.
 
-I have also worked on optimizations for GPU compilers for instance the LLVM GPU sanitizer. I am interested in exploring optimizing scheduling of programs on GPUs and making 
-parallelism on GPUs more efficient, to this end, I am interested in applying classical compiler optimizations to artificial intelligence programs that may execute on GPUs.
+I have also contributed to GPU compiler optimizations, including the LLVM GPU sanitizer, and I aim to improve GPU scheduling and parallelism. A key interest is applying classical compiler techniques to accelerate AI programs on GPUs.
 
 
 Before joining the Ph.D. program at Purdue University, I earned my Bachelor of Science in Computer Engineering from Purdue. During my Ph.D. journey, I have had the opportunity to intern at notable organizations such as [Nod.ai](https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html), [Lawrence Livermore National Labs](https://www.llnl.gov/) and [Microsoft Research](https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/)
+
+In my free time, I enjoy playing the piano, playing table tennis, and listening to music. I also like solving the Rubik’s Cube. I’m a car enthusiast as well, and I enjoy servicing and working on my car both for fun. I also like to read about high end audio systems and consider myself an audio enthusiast.
 
 
 # Research Areas of Interest
