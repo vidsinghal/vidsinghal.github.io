@@ -21,7 +21,7 @@ I have also contributed to GPU compiler optimizations, including the LLVM GPU sa
 
 Before joining the Ph.D. program at Purdue University, I earned my Bachelor of Science in Computer Engineering from Purdue. During my Ph.D. journey, I have had the opportunity to intern at notable organizations such as [Nod.ai](https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html), [Lawrence Livermore National Labs](https://www.llnl.gov/) and [Microsoft Research](https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/)
 
-In my free time, I enjoy playing the piano, playing table tennis, and listening to music. I also like solving the Rubik’s Cube. I’m a car enthusiast as well, and I enjoy servicing and working on my car both for fun. I also like to read about high end audio systems and consider myself an audio enthusiast.
+In my free time, I enjoy playing the piano, playing table tennis, and listening to music. I also like solving the Rubik’s Cube. I’m a car enthusiast as well, and I enjoy servicing and working on my car for fun. I also like to read about high end audio systems and consider myself an audio enthusiast.
 
 
 # Research Areas of Interest
