@@ -17,6 +17,7 @@ redirect_from:
 - Member of the Artifact Evaluation Committee (AEC) for [CGO 2025](https://2025.cgo.org/track/cgo-2025-artifact-evaluation)
 - Member of the Artifact Evaluation Committee (AEC) for [PPoPP 2024](https://ppopp24.sigplan.org/track/PPoPP-2024-artifact-evaluation)
 - Member of the Artifact Evaluation Committee (AEC) for [PPoPP 2023](https://ppopp23.sigplan.org/track/PPoPP-2023-artifact-evaluation)
+- Member of the Reviews for the Journal of Open Source Software [JOSS](https://github.com/openjournals/joss-reviews?tab=readme-ov-file)
 
 # Volunteer Experience
 - Moderated a session at the [2024 LLVM developers meeting](https://llvm.org/devmtg/2024-10/)
