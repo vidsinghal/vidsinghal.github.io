@@ -13,6 +13,8 @@ Welcome! This is the news section! I plan to keep this up to date so that you kn
 
 # Latest News
 
+- **December 2025**: Presented a Poster at the Midwest Programming Language Summit in the University of Minnesota. Poster available [here]({{base_path}}/files/MWPLS-2025-Poster.pdf).
+
 - **May 2025**: Started as a Research Intern at Microsoft Research.
 
 - **February 2025**: Read my new [research blog]({{base_path}}/posts/2025/02/blog-post-1/) about the distinction between AoS vs SoA packed layouts as it pertains to the Gibbon compiler.
