@@ -31,13 +31,12 @@ In my free time, I enjoy playing the piano, playing table tennis, and listening 
 - Compilers for GPU
 - High Performance Computing
 
-# Talks 
-- [MWPLS 2024](https://pl.cs.uchicago.edu/PLSummit/2024/) -
-Optimizing Layout of Recursive Datatypes with Marmoset: Or, Algorithms + Data Layouts = Efficient Programs. Vidush Singhal, Purdue University.
-- [ECOOP 2024](https://2024.ecoop.org/program/program-ecoop-2024/) -
-Optimizing Layout of Recursive Datatypes with Marmoset: Or, Algorithms + Data Layouts = Efficient Programs. Vidush Singhal, Purdue University.
-- [ASE 2022](https://conf.researchr.org/program/ase-2022/program-ase-2022/) - 
-Cornucopia: A Framework for Feedback Guided Generation of Binaries
+# Talks Given
+- [MWPLS 2025](https://2025.mwpls.org/), [AoS To SoA Transformation of packed ADTs]({{base_path}}/files/MWPLS-2025-Poster.pdf)
+- [MWPLS 2024](https://pl.cs.uchicago.edu/PLSummit/2024/), Optimizing Layout of Recursive Datatypes with Marmoset
+- [ECOOP 2024](https://2024.ecoop.org/program/program-ecoop-2024/), Optimizing Layout of Recursive Datatypes with Marmoset
+- [PurPL Seminar](https://purduepl.github.io/seminars/2024/2024-4-26-seminar), Optimizing Layout of Recursive Datatypes with marmoset
+- [ASE 2022](https://conf.researchr.org/program/ase-2022/program-ase-2022/), Cornucopia: A Framework for Feedback Guided Generation of Binaries
 
 
 # Current Status
