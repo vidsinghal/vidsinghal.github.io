@@ -24,7 +24,8 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Vidush Singhal"
-  pronouns         : # example: "she/her"  
+  pronouns         : # example: "she/her"
+  pronunciation    : true
   bio              : "Exploring the Frontiers of Compiler Research 🔍🧭🗺️🌍🚀"
   location         : "Lafayette, IN, USA"
   employer         : "Purdue University"

@@ -144,6 +144,18 @@
   }
 }
 
+.author__pronunciation {
+  margin: 0;
+  font-size: $type-size-6;
+  color: var(--global-text-color);
+  opacity: 0.75;
+
+  @include breakpoint($large) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
 .author__bio {
   margin: 0;
 
