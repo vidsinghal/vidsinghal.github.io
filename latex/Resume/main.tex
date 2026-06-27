@@ -1,0 +1,163 @@
+%-------------------------
+% Vidush Singhal Resume — Jasmine Tang style
+%-------------------------
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.75in]{geometry}
+% LuaLaTeX font setup
+\usepackage{fontspec}
+
+% Keep the original Latin Modern look under LuaLaTeX
+\setmainfont{Latin Modern Roman}
+
+% IPA font only for pronunciation
+\newfontfamily\ipafont[
+  Ligatures=TeX,
+  Scale=MatchLowercase
+]{Doulos SIL}
+
+\newcommand{\ipa}[1]{{\ipafont /#1/}}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+
+%------------------------------------------------
+% COLOR & SPACING SETUP
+%------------------------------------------------
+\definecolor{accentblue}{RGB}{48,87,150}
+\definecolor{textgray}{RGB}{45,45,45}
+\definecolor{rulegray}{gray}{0.8}
+\definecolor{navyblue}{RGB}{0,31,107}
+\definecolor{sapphireblue}{RGB}{15,82,186}
+\definecolor{ultramarineblue}{HTML}{0437F2}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setlist[itemize]{noitemsep,topsep=2pt,leftmargin=1em}
+\renewcommand{\baselinestretch}{1.05}
+
+\titleformat{\section}
+  {\large\bfseries\color{black}}
+  {}{0pt}{}[\vspace{-1pt}\color{rulegray}\titlerule\vspace{-6pt}]
+
+%------------------------------------------------
+\begin{document}
+%------------------------------------------------
+
+\begin{center}
+  {\Huge\textbf{Vidush Singhal}}\\[3pt]
+  {\small \ipa{ʋɪ.d̪ŭʂ ˈsɪŋ.ɡʱəl}}\\[6pt]
+  West Lafayette, IN, USA (Open to work) \\
+  \href{mailto:singhav@purdue.edu}{\textcolor{ultramarineblue}{singhav@purdue.edu}} \,|\, 
+  \href{https://vidsinghal.github.io}{\textcolor{ultramarineblue}{vidsinghal.github.io}} \,|\, 
+  \href{https://github.com/vidsinghal}{\textcolor{ultramarineblue}{github.com/vidsinghal}} \,|\, 
+  \href{https://linkedin.com/in/vidush-singhal}{\textcolor{ultramarineblue}{linkedin.com/in/vidush-singhal}}\\
+\end{center}
+\vspace{-15pt}
+
+%------------------------------------------------
+\section*{Summary}
+I am a Ph.D. student in Electrical and Computer Engineering at Purdue University, specializing in compilers. I have significant experience working on the LLVM compiler. I am experienced with MLIR, and compilers for GPU. My research interests lie in compiler optimizations, automatic parallelization, data layout optimization, compilers for GPU, security and software verification.
+%------------------------------------------------
+\section*{Experience}
+
+\textbf{Microsoft Research \textcolor{ultramarineblue}{\href{https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/}{(RiSE)}}} \hfill Redmond, WA\\
+\textit{Research Intern} \hfill May 2025 -- Aug 2025
+\begin{itemize}
+  \item Built a clang based source-to-source transpiler (\texttt{C2Pulse}) for verifying memory correctness of \texttt{C} programs.
+  %\item Built a pipeline from C to Pulse, which is ther verified by FStar.
+  \item \textbf{Authored $\approx$ 7K loc} in \texttt{C++}, creating a robust transformation and benchmarking infrastructure.
+  \item Verified parts of DPE (Dice Protection Environment) protocols for memory safety and correctness.
+\end{itemize}
+
+\textbf{Lawrence Livermore National Laboratory \textcolor{ultramarineblue}{\href{https://www.llnl.gov/}{(LLNL)}}} \hfill Livermore, CA\\
+\textit{Computing Scholar Intern} \hfill May 2024 -- Aug 2024
+\begin{itemize}
+  \item Developed LLVM IR passes for optimizing memory layout of allocations using the Attributor framework. 
+  \item Optimized the implementation of the LLVM GPU sanitizer, such as, hoisting checks out of loops.
+  \item Improved XSBench runtime by \textbf{6\%} when run via the sanitizer as a consequence of the optimizations.
+\end{itemize}
+
+\textbf{Nod.ai \textcolor{ultramarineblue}{\href{https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html}{(Acquired by AMD)}}} \hfill Santa Clara, CA\\
+\textit{Machine Learning Compiler Intern} \hfill May 2022 -- Aug 2022
+\begin{itemize}
+  \item Implemented Torch-MLIR kernels for various PyTorch ops.
+  \item Improved end-to-end compiler flow from PyTorch to MLIR by supporting more PyTorch ops.
+  \item Provided end to end support for the Facebook DLRM model.
+  \item Improved search/scheduling strategy of in-house software using fuzzing.
+\end{itemize}
+
+\textbf{Purdue University - \textcolor{ultramarineblue}{\href{https://engineering.purdue.edu/~milind/}{PLCL Group}}} \hfill West Lafayette, IN\\
+\textit{Graduate Research Assistant} \hfill May 2021 -- Present
+\begin{itemize}
+     \item \textbf{Gibbon Compiler}
+      \begin{itemize}
+       \item Optimizing layout of data types for better spatial locality.
+       \item Observed \textbf{speedups of 1.14x to 54x} over best prior work.
+       \item Implemented a transformation similar to structure of arrays for better vectorization. 
+       %\item This transformation can help with accelerating AI workloads written in Haskell.
+       \item Observed \textbf{10x speedup} for manually written initial experiments.
+       \end{itemize}
+       \item \textbf{Orchard Compiler}
+       \begin{itemize}
+       \item Developed a compiler framework to automatically fuse and parallelize tree traversals.
+       \item Observed \textbf{speedups ranging from 1-5x} over baseline tree traversals.
+       \end{itemize}
+      \item \textbf{Cornucopia}
+      \begin{itemize} 
+      %\item A framework for generating a corpus of binaries for a source file by utilizing compiler optimizations.
+      \item Developed a framework that uses fuzzing to generate a database of binaries using llc’s optimization flags.
+      \item \textbf{Discovered various bugs} with the LLVM compiler’s optimization passes.
+      \item \textbf{Uncovered bugs} in Angr, Ghidra etc. that failed to de-compile Cornucopia generated binaries.
+      \item Developed a framework that stores ground truth meta-data in the binary to test against BATs.
+      \end{itemize}
+      \item \textbf{Copse Compiler}
+      \begin{itemize} 
+      \item A framework to evaluate FHE decision trees in a vectorized fashion.
+      %\item Developed a compiler framework to automatically fuse and parallelize tree traversals.
+      \end{itemize}
+\end{itemize}
+
+\textbf{Senior Design Project - \textcolor{ultramarineblue}{\href{https://engineering.purdue.edu/SoC-Team}{SoCET Team}}} \hfill West Lafayette, IN\\
+\textit{Undergraduate Research} \hfill Jul 2020 -- May 2021
+\begin{itemize}
+    \item Developed a LLVM based compiler tool for optimizing sparsity of programs.
+    %\item The compiler’s objective was to optimize C programs for sparsity.
+    \item Modified the LLVM RISCV backend by writing multiple machine IR passes.
+    \item The compiler identified sparse regions and annotated/marked them as sparse statically.
+    %\item The hardware performed dynamic checks at runtime when it sees an annotated region.
+\end{itemize}
+
+%------------------------------------------------
+\section*{Education}
+\textbf{Purdue University}, West Lafayette, IN\\
+Ph.D. in Electrical \& Computer Engineering \hfill Expected Aug 2027\\
+M.S. in Electrical \& Computer Engineering \hfill May 2023\\
+B.S. in Computer Engineering \hfill Class of 2021\\
+% Vidush: TODO put course numbers here
+\textbf{Relevant Coursework:} Compiler Code Generation and Optimization (ECE 66300), Compilers for GPUs (CS 59200), Graph Theory (MA 57500), Programming Parallel Machines (ECE 56300), Reasoning about programs (CS 56000), Formal Languages, Computability, and Parallelization (ECE 66400), Programming Languages (CS 56500), Holistic Software Security (ECE 69500)
+
+%------------------------------------------------
+\section*{Publications}
+\begin{itemize}[leftmargin=1em]
+  \item Raghav Malik, \textbf{Vidush Singhal}, Benjamin Gottfried, Milind Kulkarni. “Vectorized Secure Evaluation of Decision Forests.” \href{https://dl.acm.org/doi/abs/10.1145/3453483.3454094}{\textcolor{ultramarineblue}{\textit{PLDI 2021.}}}
+  \item \textbf{Vidush Singhal}, Akul Abhilash Pillai, Charitha Saumya, Milind Kulkarni, Aravind Machiry. “Cornucopia: A Framework for Feedback Guided Generation of Binaries.” \href{https://dl.acm.org/doi/abs/10.1145/3551349.3561152}{\textcolor{ultramarineblue}{\textit{ASE 2022.}}}
+  \item \textbf{Vidush Singhal}, Chaitanya Koparkar, Joseph Zullo, Artem Pelenitsyn, Mike Rainey, Milind Kulkarni. “Optimizing Layout of Recursive Datatypes with Marmoset.” \href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2024.38}{\textcolor{ultramarineblue}{\textit{ECOOP 2024.}}}
+  \item \textbf{Vidush Singhal}, Laith Sakka, Kirshanthan Sundararajah, Ryan Newton, Milind Kulkarni. “Orchard: Heterogeneous Parallelism and Fine-grained Fusion for Complex Tree Traversals.” \href{https://dl.acm.org/doi/full/10.1145/3652605}{\textcolor{ultramarineblue}{\textit{ACM TACO 2024.}}}
+  \item Chaitanya S. Koparkar, \textbf{Vidush Singhal}, Aditya Gupta, Mike Rainey, Michael Vollmer, Artem Pelenitsyn, Sam Tobin-Hochstadt, Milind Kulkarni, Ryan R. Newton. “Garbage Collection for Mostly Serialized Heaps.” \href{https://dl.acm.org/doi/abs/10.1145/3652024.3665512}{\textcolor{ultramarineblue}{\textit{ISMM 2024.}}}
+\end{itemize}
+%------------------------------------------------
+\section*{Skills}
+Assembly, C, C++, Haskell, Python, CUDA, CMake, Makefile, LLVM IR, MLIR, Clang, GCC ,OpenMP, MPI, Cilk, Coq, Dafny, FStar, Pulse, Git, Gem5, AFL++, GDB, Linux, GDB
+
+%------------------------------------------------
+\section*{Awards, Grants \& Service}
+\textbf{Dean’s List and Semester Honors}, Purdue University \hfill (2017 - 2020)\\
+\textbf{LLVM Developers’ Meeting Travel Grant} \hfill 2024\\ 
+\textbf{Artifact Evaluation Committee Member} - PLDI, CGO, ICFP, PPoPP, POPL \hfill (2023–2025)\\
+\textbf{Seminar Co-Coordinator}, \textcolor{ultramarineblue}{\href{https://purduepl.github.io/index.html}{Purdue Programming Languages and Systems Research Group}} \hfill(2025 - present)\\
+
+\end{document}

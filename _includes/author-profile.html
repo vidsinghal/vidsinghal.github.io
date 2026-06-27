@@ -17,7 +17,7 @@
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.pronunciation %}<p class="author__pronunciation" aria-label="Pronunciation: WI-dosh SING-ghuhl">Pronounced: "WI-dosh SING-ghuhl"<br><span lang="und-Latn-fonipa">/ʋɪˈd̪oʃ ˈsɪŋɡʱəl/</span></p>{% endif %}
+    {% if author.pronunciation %}<p class="author__pronunciation pronunciation" lang="und-Latn-fonipa">/ʋɪ.d̪ŭʂ ˈsɪŋ.ɡʱəl/</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
@@ -136,9 +136,9 @@
       {% if author.tumblr %}
         <li><a href="https://{{ author.tumblr }}.tumblr.com"><i class="fab fa-fw fa-tumblr icon-pad-right" aria-hidden="true"></i>Tumblr</a></li>
       {% endif %}      
-      {% if author.twitter %}
+      <!-- {% if author.twitter %}
         <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>X (formerly Twitter)</a></li>
-      {% endif %}
+      {% endif %} -->
       {% if author.vine %}
         <li><a href="https://vine.co/u/{{ author.vine }}"><i class="fab fa-fw fa-vine icon-pad-right" aria-hidden="true"></i>Vine</a></li>
       {% endif %}        

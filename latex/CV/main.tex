@@ -1,0 +1,698 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+%\usepackage{cfr-lm}
+%\usepackage[T1]{fontenc}
+%\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage[backend=biber,style=authoryear,sorting=ydnt]{biblatex}
+
+\usepackage{fontspec}
+
+% Palatino-like font under LuaLaTeX; preserves bold and italic
+\setmainfont[
+  Ligatures=TeX,
+  UprightFont = *-regular,
+  BoldFont = *-bold,
+  ItalicFont = *-italic,
+  BoldItalicFont = *-bolditalic
+]{texgyrepagella}
+
+% IPA font only for pronunciation
+\newfontfamily\ipafont[
+  Ligatures=TeX,
+  Scale=MatchLowercase
+]{Doulos SIL}
+
+\newcommand{\ipa}[1]{{\ipafont /#1/}}
+
+\addbibresource{publications.bib}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% % Font options
+% \newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+% \newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+% \newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+% \newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+% \newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+% \newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+% \newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+% \newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+% \newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+% \newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+% Font options -- LuaLaTeX/fontspec-safe
+\newcommand{\headerfonti}{\sffamily}
+\newcommand{\headerfontii}{\rmfamily}
+\newcommand{\headerfontiii}{\rmfamily}
+\newcommand{\headerfontiv}{\rmfamily}
+\newcommand{\headerfontv}{\sffamily}
+\newcommand{\headerfontvi}{\sffamily}
+\newcommand{\headerfontvii}{\sffamily}
+\newcommand{\headerfontviii}{\rmfamily}
+\newcommand{\headerfontix}{\rmfamily}
+\newcommand{\headerfontx}{\rmfamily}
+
+
+\DeclareNameFormat{author}{%
+  \ifthenelse{\value{listcount}>1}
+    {\addcomma\space}
+    {}%
+  \ifboolexpr{
+    test {\ifnameundef{family}}
+    or
+    test {\ifnameundef{given}}
+  }
+    {}
+    {%
+      \edef\currentname{\namepartfamily}%
+      \ifthenelse{\equal{\currentname}{YourName}}%
+        {\textbf{\namepartfamily}~\textbf{\namepartgiven}}%
+        {\namepartfamily~\namepartgiven}%
+    }%
+}
+
+
+% Compact bibliography formatting
+\renewcommand*{\bibfont}{\small}
+\setlength\bibitemsep{0.2em}
+\setlength\bibhang{0.5em}
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{Vidush Singhal}}\\[-0.1mm]
+    {\small \ipa{ʋɪ.d̪ŭʂ ˈsɪŋ.ɡʱəl}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faPhone} +1-862-324-1823 | \socialicon{\faEnvelope} \href{mailto:singhav@purdue.edu}{singhav@purdue.edu} | 
+    \socialicon{\faHome} \href{https://vidsinghal.github.io}{vidsinghal.github.io}
+    }
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/vidush-singhal/}{vidush-singhal} | 
+    \socialicon{\faGithub} \href{https://github.com/vidsinghal}{vidsinghal} | 
+    %\ieeeicon{\includegraphics[height=1.3em]{ieee_collabratec_icon.png}} \href{https://ieee-collabratec.ieee.org/app/p/your-profile}{your-profile}
+    \faGraduationCap\ \href{https://scholar.google.com/citations?user=Rl-ErOsAAAAJ&hl=en}{Google Scholar} |
+    %\socialicon{\faTwitter} \href{https://x.com/vidush_singhal}{@vidush\_singhal}
+    }
+\end{center}
+\vspace{-6mm}
+\begin{center}
+    \small{707 N 5th St, Lafayette, IN, 47901}
+\end{center}
+
+\vspace{-4mm}
+
+\section{\textbf{Objective}}
+\vspace{1mm}
+\small{
+I am a 5th year PhD. student with 5+ years of experience working on compilers research and industry projects via my internships. I have significant experience working with the LLVM compiler, the Gibbon compiler among others. My interests lie broadly in compilers, programming languages, compilers for GPUs, SIMD vectorization, automatic parallelization, and data layout optimization.
+}
+\vspace{-2mm}
+
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {{Microsoft Research [\href{https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/}{\faIcon{globe}}]}}{Redmond, WA, USA}
+      {Research Intern}{May 2025 - August 2025}
+      \resumeItemListStart
+        \item Developed \textbf{a LLVM based transpiler} to verify memory correctness of C code.
+        \item Implemented the transpiler as a \textbf{clang to clang} based transformer written in C++ (\textbf{\textasciitilde7K loc})
+        \item The transpiler \textbf{C2Pulse} generates Pulse code from programmer annotated C code subsequently verified by FStar. 
+        \item Conducted analysis via the compiler by \textbf{verifying simple programs} and generating a benchmark suite.
+        \item \textbf{Verified parts of DPE (Dice Protection Environment)} by writing the protocol implementation in C.
+      \resumeItemListEnd 
+  \resumeSubheading
+    {Lawerence Livermore National Labs [\href{https://www.llnl.gov/}{\faIcon{globe}}]}{Livermore, CA, USA}
+    {Computing Scholar Intern}{May 2024 - August 2024}
+    \resumeItemListStart
+      \item Engineered a new pass to \textbf{optimize layout of bytes} in an alloca in the LLVM Attributor.
+      \item By optimizing the layout of bytes, the program \textbf{benefits from spatial locality.}
+      \item Wrote the pass in \textbf{LLVM IR}, which included eliminating dead bytes and re-ordering accessed bytes. 
+      \item Optimized the performance of the \textbf{LLVM GPU sanitizer} by hoisting checks out of loops.
+      \item Observed a \textbf{6\% improvement in runtime} on the XS Bench framework.
+      \item Wrote an LLVM pass to permute order of basic blocks in LLVM IR to see performance variation.
+    \resumeItemListEnd
+  \resumeSubheading
+    {Nod.ai labs [\href{https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html}{\faIcon{globe}}]}{Santa Clara, CA, USA}
+    {Machine Learning Compiler Engineering Intern}{May 2022 - August 2022}
+    \resumeItemListStart
+      \item Worked on \textbf{Torch-MLIR} a framework to provide compiler support from \textbf{PyTorch eco-system to MLIR.}
+      \item Implemented Kernels for various \textbf{pytorch operators.}
+      \item Worked on providing \textbf{support for the facebook DLRM} recommendation model.
+      \item Researched on \textbf{improving the ILP solver} central to the scheduling of the ALPA framework.
+    \resumeItemListEnd
+  \resumeSubheading
+    {Astrome Technologies Private Limited [\href{https://astrome.co/}{\faIcon{globe}}]}{Bengaluru, Karnataka, India}
+    {Engineering Intern}{May 2019 - August 2019}
+    \resumeItemListStart
+      \item Integrated an EMMC IP with an Axilite to Wishbone IP via a wrapper around the IP in system verilog.
+      \item Performed behavioral simulations of the IPs on Vivado software to verify correctness.
+      \item Developed XSLT files for data stored in XML files for custom data representation.
+      \item Developed code in Python to output the XML data as HTML on a private webpage used by the company.
+      \item Implemented a fast Convolution Encoding and Viterbi Decoding algorithm in C for error correction and detection.
+      \item The resulting binary was an \textbf{order of magnitude} faster than the python implementation.
+    \resumeItemListEnd
+  \resumeSubheading
+    {Purdue University [\href{https://engineering.purdue.edu/~milind/students.php}{\faIcon{university}}]}{West Lafayette, IN, USA}
+    {Graduate Research Assistant}{May 2021 - present}
+       \resumeItemListStart
+       \item \textbf{Gibbon Compiler}
+       \resumeItemListStart
+       \item Optimizing layout of data types for better spatial locality.
+       \item Observed speedups of \textbf{1.14x to 54x} over best prior work.
+       \item Implemented a transformation similar to structure of arrays for better vectorization. 
+       \item This transformation can help with accelerating AI workloads written in Haskell.
+       \item Observed \textbf{10x speedup} for manually written initial experiments. 
+       \resumeItemListEnd
+       \item \textbf{Orchard Compiler}
+       \resumeItemListStart 
+       \item Developed a compiler framework to automatically fuse and parallelize tree traversals.
+       \item Observed speedups ranging from \textbf{1-5x} over baseline tree traversals.
+       \resumeItemListEnd
+      \item \textbf{Copse Compiler}
+      \resumeItemListStart 
+      \item A framework to evaluate FHE decision trees in a vectorized fashion.
+      \resumeItemListEnd
+      \item \textbf{Cornucopia}
+      \resumeItemListStart 
+      \item A framework for generating a corpus of binaries for a source file by utilizing compiler optimizations.
+      \item Developed a framework that uses fuzzing to generate a database of binaries using llc’s optimization flags.
+      \item Discovered various bugs with the LLVM compiler’s optimization passes.
+      \item Uncovered bugs in Angr, Ghidra etc. that failed to de-compile Cornucopia generated binaries.
+      \item Developed a framework that stores ground truth meta-data in the binary to test against BATs.
+      \resumeItemListEnd
+      \resumeItemListEnd
+  \resumeSubheading
+    {Senior Design Project, SoCET Team [\href{https://engineering.purdue.edu/SoC-Team}{\faIcon{university}}]}{West Lafayette, IN, USA}
+    {Worked with Dr. Mark Johnson and Prof. Samuel Midkiff}{July 2020 - Spring 2021}
+       \resumeItemListStart
+       \item Developed a compiler tool for proprietary RISCV hardware using the LLVM framework.
+       \item The compiler’s objective was to optimize C programs for sparsity.
+       \item Modified the LLVM RISCV backend by writing multiple machine IR passes.
+       \item The passes identified sparse regions and annotated them for the hardware to identify them at runtime and perform
+runtime checks.
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+
+\section*{Education}
+\resumeSubHeadingListStart
+  \item \textbf{Purdue University}, West Lafayette, IN, USA  
+        \newline Ph.D. in Electrical and Computer Engineering \hfill May 2021 – Aug 2027  
+  \item \textbf{Purdue University}, West Lafayette, IN, USA  
+        \newline M.S. in Electrical and Computer Engineering \hfill May 2021 – May 2023
+  \item \textbf{Purdue University}, West Lafayette, IN, USA  
+        \newline B.Sc. in Computer Engineering \hfill Aug 2017 – May 2021
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, T=Thesis}}
+\vspace{0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.2em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}, itemsep=0.0em]
+  \item [\textbf{[C.1]}] Raghav Malik, \textbf{Vidush Singhal}, Benjamin Gottfried, Milind Kulkarni {\textit{"Vectorized Secure Evaluation of Decision Forests"}} in \textit{PLDI 2021}  \href{https://doi.org/10.1145/3453483.3454094}{[ACM DL]}
+
+  \item [\textbf{[C.2]}] \textbf{Vidush Singhal}, Akul Abhilash Pillai, Charitha Saumya, Milind Kulkarni, Aravind Machiry
+  {\textit{"Cornucopia: A Framework for Feedback Guided Generation of Binaries"}} in 
+  \textit{ASE 2022} \href{https://doi.org/10.1145/3551349.3561152}{[ACM DL]}
+
+  \item [\textbf{[C.3]}] \textbf{Vidush Singhal}, Chaitanya Koparkar, Joseph Zullo, Artem Pelenitsyn, Michael Vollmer, Mike Rainey, Milind Kulkarni {\textit{"Optimizing Layout of Recursive Datatypes with Marmoset"}} in \textit{ECOOP 2024} \href{https://doi.org/10.4230/LIPIcs.ECOOP.2024.38}{[LIPIcs]}
+  
+  \item [\textbf{[J.1]}] \textbf{Vidush Singhal}, Laith Sakka, Kirshanthan Sundararajah, Ryan Newton, Milind Kulkarni \textit{"Orchard: Heterogeneous Parallelism and Fine-grained Fusion for Complex Tree Traversals"} in \textit{TACO 2024} \href{https://doi.org/10.1145/3652605}{[ACM DL]}
+
+  \item [\textbf{[C.4]}] Chaitanya S. Koparkar, \textbf{Vidush Singhal}, Aditya Gupta, Mike Rainey, Michael Vollmer, Artem Pelenitsyn, Sam Tobin-Hochstadt, Milind Kulkarni, Ryan R. Newton {\textit{"Garbage Collection for Mostly Serialized Heaps"}} in \textit{ISMM 2024} \href{https://doi.org/10.1145/3652024.3665512}{[ACM DL]}
+\end{enumerate}
+\vspace{-6mm}
+
+\section{\textbf{Coursework}}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Compilers Courses: }{\footnotesize{Compiler Code Generation and Optimization, Compilers for GPUs, Intro to Compilers and Translation Engineering}}
+  \resumeSubItem{Data Structures and Algorithms: }{\footnotesize{Computation Models and Methods, Applied Algorithms, Data Structures in C}}
+  \resumeSubItem{Math Courses: }{\footnotesize{Discreet Math, Graph Theory, Category Theory, Random Variables}}
+  \resumeSubItem{AI Courses: }{\footnotesize{Intro to Artificial Intelligence, Python for Data Science}}
+  \resumeSubItem{Systems Courses: }{\footnotesize{Computer Architecture, Programming Parallel Machines, Microprocessors and micro-controllers, Digital Design}}
+  \resumeSubItem{PL courses: }{\footnotesize{Reasoning about programs, Formal Languages, Computability, and Parallelization, Programming Languages, Advanced C Programming, Object Oriented Programming in C++}}
+  \resumeSubItem{Other Courses: }{\footnotesize{Holistic Software Security, Intro to Quantum Computing}}
+  
+ \resumeHeadingSkillEnd
+\vspace{-0.4mm}
+
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages: }
+    {\footnotesize{C, C++, Haskell, Python, Java, Bash, Assembly (ARM, X86), MATLAB, System Verilog, CUDA, Coq, Dafny, Pulse}}
+  \resumeSubItem{Web Technologies: }
+    {\footnotesize{HTML, CSS}}
+  \resumeSubItem{Database Systems: }
+    {\footnotesize{PostgreSQL}}
+  \resumeSubItem{Data Science \& Machine Learning: }
+    {\footnotesize{PyTorch, TensorFlow}}
+   \resumeSubItem{Operating Systems: }
+    {\footnotesize{Unix/Linux, Windows}}
+%\resumeSubItem{Cloud Technologies:}
+%    {Cloud Platform 1, Cloud Platform 2, Cloud Platform 3}
+  \resumeSubItem{Version Control: }
+    {\footnotesize{GIT}}
+%  \resumeSubItem{Specialized Area:}
+%    {Skill 1, Skill 2, Skill 3, Skill 4}
+%  \resumeSubItem{Mathematical \& Statistical Tools:}
+%    {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+  \resumeSubItem{Other Tools \& Technologies: }
+    {\footnotesize{LLVM, GCC, AFL++, Gem5, OpenCilk, Intel TBB, Pthreads, OpenMP, Intel Cilk Tools, MPI, NumPy, CUDA, GDB}}
+  \resumeSubItem{IDEs: }
+    {\footnotesize{Visual Studio Code, Vim, Notepad++, Kate, Clion}}
+%  \resumeSubItem{Research Skills:}{Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6}
+ \resumeSubItem{Soft Skills: }{\footnotesize{A calm minded, inclusive, and humble individual who believes in good communication skills and teamwork.}} 
+ \resumeHeadingSkillEnd
+\vspace{-0.4mm}
+
+\section{\textbf{Teaching Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR
+  {Teaching Assistant}
+  {, Prof. Milind Kulkarni, Intro to Data Science, Purdue University}
+  {Fall 2025}
+
+\resumePOR
+  {Teaching Assistant}
+  {, Prof. Milind Kulkarni, Intro to Data Science, Purdue University}
+  {Spring 2023}
+
+
+\resumePOR
+  {Undergraduate Teaching Assistant}
+  {, Prof. Cheng Kok Koh, ECE 368, Purdue University}
+  {Spring 2020}
+
+\resumePOR
+  {Student Grader for Signals and Systems}
+  {, Prof. Chih-Chun Wang, ECE 301, Purdue University}
+  {Spring 2020}  
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%Talks
+\section{\textbf{Talks Given}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR
+  {\href{https://2025.mwpls.org}{MWPLS 2025}}
+  {, \href{https://vidsinghal.github.io/files/MWPLS-2025-Poster.pdf}{AoS To SoA Transformation of packed ADTs}}
+  {Fall 2025}
+
+\resumePOR
+  {\href{https://pl.cs.uchicago.edu/PLSummit/2024/}{MWPLS 2024}}
+  {, Optimizing Layout of Recursive Datatypes with Marmoset}
+  {Fall 2024}
+
+\resumePOR  
+  {\href{https://2024.ecoop.org/program/program-ecoop-2024/}{ECOOP 2024}}
+  {, Optimizing Layout of Recursive Datatypes with Marmoset}
+  {Fall 2024}
+
+\resumePOR
+  {\href{https://purduepl.github.io/seminars/2024/2024-4-26-seminar}{PurPL Seminar}}
+  {, Optimizing Layout of Recursive Datatypes with marmoset}
+  {Spring 2024}
+
+\resumePOR
+  {\href{https://conf.researchr.org/program/ase-2022/program-ase-2022/}{ASE 2022}}
+  {, Cornucopia: A Framework for Feedback Guided Generation of Binaries}
+  {Fall 2022}
+  
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR
+  {Received a travel grant}
+  {, LLVM developers meeting}
+  {October 2024}
+
+\resumePOR
+  {Semester Honors}
+  {, Purdue University}
+  {Fall 2019 - Spring 2020}
+
+\resumePOR
+  {Deans's List and Semester Honors}
+  {, Purdue University}
+  {Fall 2017 - Spring 2018}
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+\section{\textbf{Leadership Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR
+  {Seminar Co-Coordinator}
+  {, \footnotesize{Purdue Programming Languages and Systems Research Group (PurPL)}}
+  {Fall 2025 - present}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Review Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+%https://c3po-workshop.github.io/2026/organization
+\resumePOR
+  {Member of the Program Committe (PC Member)}
+  {, \href{https://c3po-workshop.github.io/2026/organization}{C3PO 2026}}
+  {Spring 2026}
+
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://pldi26.sigplan.org/committee/pldi-2026-pldi-research-artifacts-artifact-evaluation-committee}{PLDI 2026}}
+  {Spring 2026}
+
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://2026.splashcon.org/committee/splash-2026-artifact-evaluation-artifact-evaluation-committee}{SPLASH 2026}}
+  {Spring 2026}
+
+\resumePOR
+  {Additional Reviewer}
+  {, \href{https://dl.acm.org/doi/pdf/10.1145/3774934}{PPoPP 2026}}
+  {Fall 2025}
+
+\resumePOR
+  {Member of the Reviews for the Journal of Open Source Software}
+  {, \href{https://github.com/openjournals/joss-reviews?tab=readme-ov-file}{JOSS}}
+  {Fall 2025}
+
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://popl26.sigplan.org/track/POPL-2026-artifact-evaluation}{POPL 2026}}
+  {Fall 2025}
+
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://2025.cgo.org/committee/cgo-2025-artifact-evaluation-artifact-evaluation-committee}{CGO 2026}}
+  {Fall 2025}
+
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://icfp25.sigplan.org/committee/icfp-2025-artifact-evaluation-artifact-evaluation-committe}{ICFP 2025}}
+  {Summer 2025}
+
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://pldi25.sigplan.org/committee/pldi-2025-pldi-research-artifacts-artifact-evaluation-committee}{PLDI 2025}}
+  {Spring 2025}
+
+\resumePOR
+  {Collaborative Reviewer with Advisor (Milind Kulkarni)}
+  {, CGO 2025}
+  {Spring 2025}
+  
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://2025.cgo.org/committee/cgo-2025-artifact-evaluation-artifact-evaluation-committee}{CGO 2025}}
+  {Fall 2024}
+  
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://ppopp24.sigplan.org/committee/PPoPP-2024-artifact-evaluation-artifact-evaluation-committee}{PPoPP 2024}}
+  {Spring 2024}
+  
+\resumePOR
+  {Member of the Artifact Evaluation Committee (AEC)}
+  {, \href{https://ppopp23.sigplan.org/committee/PPoPP-2023-artifact-evaluation-artifact-evaluation-committee}{PPoPP 2023}}
+  {Spring 2023}
+  
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Volunteer Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR
+  {Talk moderator}
+  {, {LLVM developers meeting 2024}}
+  {Fall 2024}
+  
+\resumePOR
+  {Student Volunteer}
+  {, {ECOOP/ISSTA 2024}}
+  {Spring 2024}
+  
+\resumePOR
+  {Student Volunteer}
+  {, {SPLASH 2021}}
+  {Fall 2021}
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Professional Memberships}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Eta Kappa Nu}
+    {, Purdue Electrical and Computer Engineering Honors Society}
+    {Fall 2018 - Present}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Mentoring}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR{Logan Anderson}
+    {, Phd @ Purdue}
+    {Fall 2025}
+
+\resumePOR{Aniruddh Srivastava}
+    {, Undergrad @ Purdue}
+    {Fall 2025}
+
+\resumePOR{Peter A Kaya Gretchikha}
+    {, Undergrad @ Purdue}
+    {Fall 2024 - Fall 2025}
+
+\resumePOR{Mikah Kainen}
+    {, Undergrad @ Purdue}
+    {Fall 2023}
+
+\resumePOR{Qingyuan (Peter) Li}
+    {, Undergrad @ Purdue, SURF summer research mentor}
+    {Spring 2023 - Fall 2023}
+    
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+% \section{\textbf{Certifications}}
+% \vspace{-0.2mm}
+% \resumeSubHeadingListStart
+% \resumePOR{}{\href{https://certification-link-a.com}{
+% \textbf{Certification A}
+% }}{Month Year}
+% \resumePOR{}{
+% \textbf{Certifying Body:} {{\href{https://certification-link-b.com}{Certification B}}}}{Month Year}
+% \resumePOR{}{
+% \textbf{Certifying Body:} {{\href{https://certification-link-c.com}{Certification C}}}}{Month Year}
+% \resumePOR{}{\href{https://certification-link-d.com}{
+% \textbf{Certification D}
+% }}{Month Year}
+% \resumeSubHeadingListEnd
+% \vspace{-6mm}
+
+% \section{\textbf{Additional Information}}
+% \vspace{-0.4mm}
+% \small{
+% \textbf{Languages:} Language A (Proficiency level), Language B (Proficiency level), Language C (Proficiency level)
+
+% \textbf{Interests:} Interest 1, Interest 2, Interest 3, Interest 4
+% }
+% \vspace{-4mm}
+
+
+% \section{\textbf{References}}
+% \vspace{-0.2mm}
+% \small{
+% \begin{enumerate}[leftmargin=*,labelsep=2mm]
+% \item \textbf{Reference Person 1}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email1@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Thesis Advisor, Manager, etc.]}
+
+% \item \textbf{Reference Person 2}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email2@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Project Supervisor, Colleague, etc.]}
+
+% \item \textbf{Reference Person 3}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email3@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Mentor, Collaborator, etc.]}
+% \end{enumerate}
+% }
+
+\end{document}
