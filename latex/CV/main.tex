@@ -251,111 +251,6 @@
 
 \vspace{-4mm}
 
-\section{\textbf{Objective}}
-\vspace{1mm}
-\small{
-I am a 5th year PhD. student with 5+ years of experience working on compilers research and industry projects via my internships. I have significant experience working with the LLVM compiler, the Gibbon compiler among others. My interests lie broadly in compilers, programming languages, compilers for GPUs, SIMD vectorization, automatic parallelization, and data layout optimization.
-}
-\vspace{-2mm}
-
-\section{\textbf{Experience}}
-\vspace{-0.4mm}
-  \resumeSubHeadingListStart
-  \resumeSubheading
-      {{Microsoft Research [\href{https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/}{\faIcon{globe}}]}}{Redmond, WA, USA}
-      {Research Intern}{May 2025 - August 2025}
-      \resumeItemListStart
-        \item Developed \textbf{a LLVM based transpiler} to verify memory correctness of C code.
-        \item Implemented the transpiler as a \textbf{clang to clang} based transformer written in C++ (\textbf{\textasciitilde7K loc})
-        \item The transpiler \textbf{C2Pulse} generates Pulse code from programmer annotated C code subsequently verified by FStar. 
-        \item Conducted analysis via the compiler by \textbf{verifying simple programs} and generating a benchmark suite.
-        \item \textbf{Verified parts of DPE (Dice Protection Environment)} by writing the protocol implementation in C.
-      \resumeItemListEnd 
-  \resumeSubheading
-    {Lawerence Livermore National Labs [\href{https://www.llnl.gov/}{\faIcon{globe}}]}{Livermore, CA, USA}
-    {Computing Scholar Intern}{May 2024 - August 2024}
-    \resumeItemListStart
-      \item Engineered a new pass to \textbf{optimize layout of bytes} in an alloca in the LLVM Attributor.
-      \item By optimizing the layout of bytes, the program \textbf{benefits from spatial locality.}
-      \item Wrote the pass in \textbf{LLVM IR}, which included eliminating dead bytes and re-ordering accessed bytes. 
-      \item Optimized the performance of the \textbf{LLVM GPU sanitizer} by hoisting checks out of loops.
-      \item Observed a \textbf{6\% improvement in runtime} on the XS Bench framework.
-      \item Wrote an LLVM pass to permute order of basic blocks in LLVM IR to see performance variation.
-    \resumeItemListEnd
-  \resumeSubheading
-    {Nod.ai labs [\href{https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html}{\faIcon{globe}}]}{Santa Clara, CA, USA}
-    {Machine Learning Compiler Engineering Intern}{May 2022 - August 2022}
-    \resumeItemListStart
-      \item Worked on \textbf{Torch-MLIR} a framework to provide compiler support from \textbf{PyTorch eco-system to MLIR.}
-      \item Implemented Kernels for various \textbf{pytorch operators.}
-      \item Worked on providing \textbf{support for the facebook DLRM} recommendation model.
-      \item Researched on \textbf{improving the ILP solver} central to the scheduling of the ALPA framework.
-    \resumeItemListEnd
-  \resumeSubheading
-    {Astrome Technologies Private Limited [\href{https://astrome.co/}{\faIcon{globe}}]}{Bengaluru, Karnataka, India}
-    {Engineering Intern}{May 2019 - August 2019}
-    \resumeItemListStart
-      \item Integrated an EMMC IP with an Axilite to Wishbone IP via a wrapper around the IP in system verilog.
-      \item Performed behavioral simulations of the IPs on Vivado software to verify correctness.
-      \item Developed XSLT files for data stored in XML files for custom data representation.
-      \item Developed code in Python to output the XML data as HTML on a private webpage used by the company.
-      \item Implemented a fast Convolution Encoding and Viterbi Decoding algorithm in C for error correction and detection.
-      \item The resulting binary was an \textbf{order of magnitude} faster than the python implementation.
-    \resumeItemListEnd
-  \resumeSubheading
-    {Purdue University [\href{https://engineering.purdue.edu/~milind/students.php}{\faIcon{university}}]}{West Lafayette, IN, USA}
-    {Graduate Research Assistant}{May 2021 - present}
-       \resumeItemListStart
-       \item \textbf{Gibbon Compiler}
-       \resumeItemListStart
-       \item Optimizing layout of data types for better spatial locality.
-       \item Observed speedups of \textbf{1.14x to 54x} over best prior work.
-       \item Implemented a transformation similar to structure of arrays for better vectorization. 
-       \item This transformation can help with accelerating AI workloads written in Haskell.
-       \item Observed \textbf{10x speedup} for manually written initial experiments. 
-       \resumeItemListEnd
-       \item \textbf{Orchard Compiler}
-       \resumeItemListStart 
-       \item Developed a compiler framework to automatically fuse and parallelize tree traversals.
-       \item Observed speedups ranging from \textbf{1-5x} over baseline tree traversals.
-       \resumeItemListEnd
-      \item \textbf{Copse Compiler}
-      \resumeItemListStart 
-      \item A framework to evaluate FHE decision trees in a vectorized fashion.
-      \resumeItemListEnd
-      \item \textbf{Cornucopia}
-      \resumeItemListStart 
-      \item A framework for generating a corpus of binaries for a source file by utilizing compiler optimizations.
-      \item Developed a framework that uses fuzzing to generate a database of binaries using llc’s optimization flags.
-      \item Discovered various bugs with the LLVM compiler’s optimization passes.
-      \item Uncovered bugs in Angr, Ghidra etc. that failed to de-compile Cornucopia generated binaries.
-      \item Developed a framework that stores ground truth meta-data in the binary to test against BATs.
-      \resumeItemListEnd
-      \resumeItemListEnd
-  \resumeSubheading
-    {Senior Design Project, SoCET Team [\href{https://engineering.purdue.edu/SoC-Team}{\faIcon{university}}]}{West Lafayette, IN, USA}
-    {Worked with Dr. Mark Johnson and Prof. Samuel Midkiff}{July 2020 - May 2021}
-       \resumeItemListStart
-       \item Developed a compiler tool for proprietary RISCV hardware using the LLVM framework.
-       \item The compiler’s objective was to optimize C programs for sparsity.
-       \item Modified the LLVM RISCV backend by writing multiple machine IR passes.
-       \item The passes identified sparse regions and annotated them for the hardware to identify them at runtime and perform
-runtime checks.
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-\vspace{-6mm}
-
-\section{Additional Experience}
-\vspace{-0.4mm}
-\resumeSubHeadingListStart
-\resumePOR
-  {RooflineAI GmbH}
-  {\footnotesize{, Cologne, Germany -- Explored global tensor layout optimization for MLIR Linalg IR in IREE}}
-  {June 2026}
-\resumeSubHeadingListEnd
-\vspace{-6mm}
-
-
 \section*{Education}
 \resumeSubHeadingListStart
   \item \textbf{Purdue University}, West Lafayette, IN, USA  
@@ -366,6 +261,103 @@ runtime checks.
         \newline B.Sc. in Computer Engineering \hfill Aug 2017 – May 2021
 \resumeSubHeadingListEnd
 \vspace{-6mm}
+
+\section{\textbf{Research Interests}}
+\vspace{1mm}
+\small{
+I am a Ph.D. student in Electrical and Computer Engineering at Purdue University working on compiler techniques for improving the performance of programs over irregular recursive datatypes. My thesis is \textit{Compiler Techniques for Optimizing the Layout of Irregular Recursive Datatypes}. My research interests include compilers, programming languages, program analysis, static analysis, data layout optimization, locality optimization, SIMD vectorization, automatic parallelization, and compilers for GPUs. I have experience building compiler infrastructure in Gibbon, LLVM, Clang, and MLIR/Torch-MLIR.
+}
+\vspace{-2mm}
+
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {{Microsoft Research [\href{https://www.microsoft.com/en-us/research/group/research-software-engineering-rise/}{\faIcon{globe}}]}}{Redmond, WA, USA}
+      {Research Intern}{May 2025 -- August 2025}
+      \resumeItemListStart
+        \item Developed \textbf{C2Pulse}, an LLVM/Clang-based transpiler for verifying memory correctness of annotated C programs.
+        \item Implemented a \textbf{Clang-to-Clang} source transformer (\textbf{\textasciitilde7K LOC of C++}) that emits Pulse code for F* verification.
+        \item Built a C benchmark suite and validated generated verification conditions on representative annotated C programs.
+        \item Implemented and verified components of \textbf{DPE (Dice Protection Environment)} written in C through C2Pulse.
+      \resumeItemListEnd 
+  \resumeSubheading
+    {Lawrence Livermore National Laboratory [\href{https://www.llnl.gov/}{\faIcon{globe}}]}{Livermore, CA, USA}
+    {Computing Scholar Intern}{May 2024 -- August 2024}
+    \resumeItemListStart
+      \item Engineered an LLVM Attributor pass to \textbf{optimize byte layout within stack allocations} for improved spatial locality.
+      \item Implemented \textbf{LLVM IR} analyses and transformations to eliminate dead bytes and reorder frequently accessed bytes.
+      \item Optimized the \textbf{LLVM GPU sanitizer} by hoisting redundant checks out of loops, reducing XSBench runtime by \textbf{6\%}.
+      \item Built an LLVM IR basic-block permutation pass to evaluate performance sensitivity to code layout.
+    \resumeItemListEnd
+  \resumeSubheading
+    {Nod.ai Labs [\href{https://www.amd.com/en/newsroom/press-releases/2023-10-10-amd-to-acquire-open-source-ai-software-expert-nod-.html}{\faIcon{globe}}]}{Santa Clara, CA, USA}
+    {Machine Learning Compiler Engineering Intern}{May 2022 -- August 2022}
+    \resumeItemListStart
+      \item Contributed to \textbf{Torch-MLIR}, a compiler stack for lowering programs from the \textbf{PyTorch ecosystem to MLIR}.
+      \item Implemented kernels and compiler support for multiple \textbf{PyTorch operators} in the Torch-MLIR pipeline.
+      \item Added support for the \textbf{Facebook DLRM} recommendation model in the PyTorch-to-MLIR compilation pipeline.
+      \item Investigated improvements to the \textbf{ILP solver} used by the Alpa scheduling framework.
+    \resumeItemListEnd
+  \resumeSubheading
+    {Astrome Technologies Private Limited [\href{https://astrome.co/}{\faIcon{globe}}]}{Bengaluru, Karnataka, India}
+    {Engineering Intern}{May 2019 -- August 2019}
+    \resumeItemListStart
+      \item Integrated an eMMC IP block with an AXI-Lite-to-Wishbone bridge using a SystemVerilog wrapper.
+      \item Verified the eMMC IP and bridge integration through Vivado behavioral simulations.
+      \item Built XSLT and Python tooling to render XML data as internal HTML reports.
+      \item Implemented convolutional encoding and Viterbi decoding algorithms in C for error correction and detection.
+      \item Achieved an \textbf{order-of-magnitude speedup} over the original Python implementation.
+    \resumeItemListEnd
+  \resumeSubheading
+    {Purdue University [\href{https://engineering.purdue.edu/~milind/students.php}{\faIcon{university}}]}{West Lafayette, IN, USA}
+    {Graduate Research Assistant}{May 2021 -- Present}
+       \resumeItemListStart
+       \item \textbf{Gibbon Compiler}
+       \resumeItemListStart
+       \item Optimized layouts of recursive datatypes to improve spatial locality.
+       \item Measured speedups of \textbf{1.14x to 54x} over the best prior work.
+       \item Implemented an array-of-structs to structure-of-arrays-style transformation for packed algebraic datatypes.
+       \item Structure-of-arrays transformation enables selective traversal, our benchmarks saw speedups of \textbf{1.1x to 12x}.
+       \item Developing optimizations enabled by the SoA representation such as loopification and vectorization.
+       \resumeItemListEnd
+       \item \textbf{Orchard Compiler}
+       \resumeItemListStart 
+       \item Developed a compiler framework to automatically fuse and parallelize tree traversals.
+       \item Measured speedups ranging from \textbf{1x to 5x} over baseline tree traversals.
+       \resumeItemListEnd
+      \item \textbf{Copse Compiler}
+      \resumeItemListStart 
+      \item Developed a framework for vectorized evaluation of fully homomorphic encryption (FHE) decision trees.
+      \resumeItemListEnd
+      \item \textbf{Cornucopia}
+      \resumeItemListStart 
+      \item Developed a fuzzing-based framework to generate a corpus of optimized binaries from source programs using \texttt{llc} optimization flags.
+      \item Discovered bugs in LLVM compiler optimization passes.
+      \item Exposed decompilation failures in angr, Ghidra, and related binary analysis tools on generated binaries.
+      \item Embedded ground-truth metadata in generated binaries to evaluate binary analysis tools (BATs).
+      \resumeItemListEnd
+      \resumeItemListEnd
+  \resumeSubheading
+    {Senior Design Project, SoCET Team [\href{https://engineering.purdue.edu/SoC-Team}{\faIcon{university}}]}{West Lafayette, IN, USA}
+    {Senior Design Team Member; advised by Dr. Mark Johnson and Prof. Samuel Midkiff}{July 2020 -- May 2021}
+       \resumeItemListStart
+       \item Developed an LLVM-based compiler tool for proprietary RISC-V hardware.
+       \item Implemented multiple LLVM RISC-V backend Machine IR passes to identify sparse program regions.
+       \item Annotated sparse regions so hardware could detect them at runtime and perform runtime checks.
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+%\section{Additional Experience}
+%\vspace{-0.4mm}
+%\resumeSubHeadingListStart
+%\resumePOR
+%  {RooflineAI GmbH}
+%  {\footnotesize{, Cologne, Germany -- Explored global tensor layout optimization for MLIR Linalg IR in IREE}}
+%  {June 2026}
+%\resumeSubHeadingListEnd
+%\vspace{-6mm}
 
 \section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, T=Thesis}}
 \vspace{0.2mm}
@@ -387,47 +379,35 @@ runtime checks.
 
 \section{\textbf{Coursework}}
 \vspace{-0.4mm}
- \resumeHeadingSkillStart
-  \resumeSubItem{Compilers Courses: }{\footnotesize{Compiler Code Generation and Optimization, Compilers for GPUs, Intro to Compilers and Translation Engineering}}
-  \resumeSubItem{Data Structures and Algorithms: }{\footnotesize{Computation Models and Methods, Applied Algorithms, Data Structures in C}}
-  \resumeSubItem{Math Courses: }{\footnotesize{Discreet Math, Graph Theory, Category Theory, Random Variables}}
-  \resumeSubItem{AI Courses: }{\footnotesize{Intro to Artificial Intelligence, Python for Data Science}}
-  \resumeSubItem{Systems Courses: }{\footnotesize{Computer Architecture, Programming Parallel Machines, Microprocessors and micro-controllers, Digital Design}}
-  \resumeSubItem{PL courses: }{\footnotesize{Reasoning about programs, Formal Languages, Computability, and Parallelization, Programming Languages, Advanced C Programming, Object Oriented Programming in C++}}
-  \resumeSubItem{Other Courses: }{\footnotesize{Holistic Software Security, Intro to Quantum Computing}}
-  
- \resumeHeadingSkillEnd
-\vspace{-0.4mm}
+{\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{0.98\textwidth}{@{}>{\bfseries}p{0.23\textwidth}@{\hspace{2mm}}L@{}}
+Compilers & Compiler Code Generation and Optimization; Compilers for GPUs; Introduction to Compilers and Translation Engineering \\
+Programming Languages & Reasoning About Programs; Programming Languages; Advanced C Programming; Object-Oriented Programming in C++ \\
+Algorithms \& Theory & Computation Models and Methods; Applied Algorithms; Data Structures in C; Formal Languages, Computability, and Parallelization \\
+Systems & Computer Architecture; Programming Parallel Machines; Microprocessors and Microcontrollers; Digital Design \\
+Mathematics & Discrete Mathematics; Graph Theory; Category Theory; Random Variables \\
+AI \& Data Science & Introduction to Artificial Intelligence; Python for Data Science \\
+Security \& Quantum & Holistic Software Security; Introduction to Quantum Computing \\
+\end{tabularx}
+}
+\vspace{-2mm}
 
 \section{\textbf{Skills}}
 \vspace{-0.4mm}
- \resumeHeadingSkillStart
-  \resumeSubItem{Programming Languages: }
-    {\footnotesize{C, C++, Haskell, Python, Java, Bash, Assembly (ARM, X86), MATLAB, System Verilog, CUDA, Coq, Dafny, Pulse}}
-  \resumeSubItem{Web Technologies: }
-    {\footnotesize{HTML, CSS}}
-  \resumeSubItem{Database Systems: }
-    {\footnotesize{PostgreSQL}}
-  \resumeSubItem{Data Science \& Machine Learning: }
-    {\footnotesize{PyTorch, TensorFlow}}
-   \resumeSubItem{Operating Systems: }
-    {\footnotesize{Unix/Linux, Windows}}
-%\resumeSubItem{Cloud Technologies:}
-%    {Cloud Platform 1, Cloud Platform 2, Cloud Platform 3}
-  \resumeSubItem{Version Control: }
-    {\footnotesize{GIT}}
-%  \resumeSubItem{Specialized Area:}
-%    {Skill 1, Skill 2, Skill 3, Skill 4}
-%  \resumeSubItem{Mathematical \& Statistical Tools:}
-%    {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-  \resumeSubItem{Other Tools \& Technologies: }
-    {\footnotesize{LLVM, GCC, AFL++, Gem5, OpenCilk, Intel TBB, Pthreads, OpenMP, Intel Cilk Tools, MPI, NumPy, CUDA, GDB}}
-  \resumeSubItem{IDEs: }
-    {\footnotesize{Visual Studio Code, Vim, Notepad++, Kate, Clion}}
-%  \resumeSubItem{Research Skills:}{Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6}
- \resumeSubItem{Soft Skills: }{\footnotesize{A calm minded, inclusive, and humble individual who believes in good communication skills and teamwork.}} 
- \resumeHeadingSkillEnd
-\vspace{-0.4mm}
+{\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{0.98\textwidth}{@{}>{\bfseries}p{0.23\textwidth}@{\hspace{2mm}}L@{}}
+Programming Languages & C; C++; Haskell; Python; Java; Bash; MATLAB; Assembly (ARM, x86); SystemVerilog \\
+Compiler \& Verification & LLVM; GCC; Coq; Dafny; Pulse; GDB \\
+Parallel \& HPC & CUDA; OpenMP; MPI; Pthreads; OpenCilk; Intel TBB; Intel Cilk Tools \\
+Data \& Machine Learning & PyTorch; TensorFlow; NumPy \\
+Systems \& Databases & Unix/Linux; Windows; PostgreSQL; AFL++; gem5 \\
+Web \& Development Tools & HTML; CSS; Git; Visual Studio Code; Vim; CLion; Notepad++; Kate \\
+Professional Skills & Communication; teamwork; inclusive collaboration \\
+\end{tabularx}
+}
+\vspace{-2mm}
 
 \section{\textbf{Teaching Experience}}
 \vspace{-0.4mm}
