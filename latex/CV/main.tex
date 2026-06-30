@@ -140,6 +140,15 @@
     \vspace{-2.4mm}
 }
 
+\newcommand{\resumeSelectedProject}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \footnotesize{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{#2} &
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -349,15 +358,19 @@ I am a Ph.D. student in Electrical and Computer Engineering at Purdue University
   \resumeSubHeadingListEnd
 \vspace{-6mm}
 
-%\section{Additional Experience}
-%\vspace{-0.4mm}
-%\resumeSubHeadingListStart
-%\resumePOR
-%  {RooflineAI GmbH}
-%  {\footnotesize{, Cologne, Germany -- Explored global tensor layout optimization for MLIR Linalg IR in IREE}}
-%  {June 2026}
-%\resumeSubHeadingListEnd
-%\vspace{-6mm}
+\section{\textbf{Selected Projects}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSelectedProject
+  {\textbf{Global Tensor Layout Optimization for IREE}}
+  {Researched on techniques for global tensor layout optimization in the IREE compiler pipeline.}
+  {June 2026}
+\resumeSelectedProject
+  {\textbf{OpenMP GPU Offloading for Parallel STL Algorithms}}
+  {Built a proof-of-concept evaluation of OpenMP GPU offloading for C++17 STL-style algorithms.}
+  {Fall 2024}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
 
 \section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, T=Thesis}}
 \vspace{0.2mm}
