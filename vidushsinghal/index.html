@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://vidsinghal.github.io/" />	
+  <meta charset="utf-8" />
+  <title>Redirecting...</title>
+  <meta name="robots" content="noindex" />
+  <script>
+    const prefix = '/vidushsinghal';
+    const loc = window.location;
+    const newPath = (loc.pathname || '/').startsWith(prefix) ? (loc.pathname.slice(prefix.length) || '/') : '/';
+    const target = loc.origin + newPath + (loc.search||'') + (loc.hash||'');
+    window.location.replace(target);
+  </script>
+  <meta http-equiv="refresh" content="0; url=/" />
+</head>
+<body>
+  <p>Redirecting to the site root. If you are not redirected automatically, <a href="/">click here</a>.</p>
+</body>
+</html>
+
